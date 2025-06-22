@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Potnuru Meher Srija - Personal Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7fafc;
+      color: #2d3748;
+    }
+    .hero {
+      background: #edf2f7;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }             
+    .hero-content {
+      padding: 3rem;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 6px 16px rgba(80, 80, 80, 0.3);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .hero-content h1 {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .content-section {
+      display: none;
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(80, 80, 80, 0.3);
+    }
+    .skills-card {
+      width: 100%;
+      max-width: 300px;
+      aspect-ratio: 1/1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #3182ce;
+    }
+    #menu-toggle, #mobile-menu {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        height: 60vh;
+      }
+      .hero-content {
+        padding: 2rem;
+      }
+      .section {
+        padding: 3rem 1rem;
+      }
+      #menu-toggle {
+        display: block;
+      }
+      #nav-links {
+        display: none;
+      }
+      #mobile-menu {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 6px 10px rgba(80, 80, 80, 0.3);
+      }
+      #mobile-menu.active {
+        display: flex;
+      }
+      .skills-card {
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <h1 class="text-2xl font-semibold text-blue-600">Portfolio</h1>
+    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 md:hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <div id="nav-links" class="space-x-6 flex items-center">
+      <a href="#home" class="nav-link text-gray-600 font-medium" data-section="home">Home</a>
+      <a href="#about" class="nav-link text-gray-600 font-medium" data-section="about">About</a>
+      <a href="#skills" class="nav-link text-gray-600 font-medium" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link text-gray-600 font-medium" data-section="projects">Projects</a>
+      <a href="#certifications" class="nav-link text-gray-600 font-medium" data-section="certifications">Certifications</a>
+      <a href="#extracurriculars" class="nav-link text-gray-600 font-medium" data-section="extracurriculars">Extracurriculars</a>
+      <a href="#education" class="nav-link text-gray-600 font-medium" data-section="education">Education</a>
+      <a href="#contact" class="nav-link text-gray-600 font-medium" data-section="contact">Contact</a>
+    </div>
+    <div id="mobile-menu" class="space-y-4 md:hidden"></div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero section">
+  <div class="hero-content">
+    <h1 class="text-5xl sm:text-6xl font-bold text-gray-800">Potnuru Meher Srija</h1>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="content-section section bg-gray-100">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-blue-600 mb-6">About Me</h2>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      Aspiring IT professional with a passion for leveraging technical expertise in software development and data analysis. Currently pursuing B.Tech in Information Technology, aiming to contribute to impactful projects while enhancing my skills.
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="content-section section bg-white">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-blue-600 mb-6">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+      <div class="card bg-gray-50 p-6 rounded-lg shadow-md skills-card">
+        <h3 class="text-xl font-medium mb-2">Technical Skills</h3>
+        <p>HTML<br>CSS<br>Python<br>C<br>Java</p>
+      </div>
+      <div class="card bg-gray-50 p-6 rounded-lg shadow-md skills-card">
+        <h3 class="text-xl font-medium mb-2">Database</h3>
+        <p>SQL</p>
+      </div>
+      <div class="card bg-gray-50 p-6 rounded-lg shadow-md skills-card">
+        <h3 class="text-xl font-medium mb-2">Soft Skills</h3>
+        <p>Communication</p><p>Problem-Solving</p><p> Leadership</p><p>Event Management</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="content-section section bg-gray-100">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold text-blue-600 text-center mb-6">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Real Time Faculty Locator</h3>
+        <p class="text-gray-600">Developed a web-based application using HTML, CSS, JavaScript (Frontend) and Node.js
+(Backend) to help students check real-time faculty availability.Implemented local storage for efficient data handling and added an
+automated email notification system to remind faculty to update their status.</p>
+      </div>
+      <div class="card bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Movies Recommendation System</h3>
+        <p class="text-gray-600">Movie recommendation systems aim at helping movie enthusiasts by
+suggesting what movie to watch without having to go through the long process of choosing from a large set of movies which go up
+to thousands and millions that is time consuming and confusing.
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="content-section section bg-white">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold text-blue-600 text-center mb-6">Certifications</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <li class="card bg-gray-50 p-4 rounded-lg shadow-md text-gray-600 text-center cursor-pointer" data-image="D:\New folder\academor.jpg">Internship in Web Development - Academor</li>
+      <li class="card bg-gray-50 p-4 rounded-lg shadow-md text-gray-600 text-center cursor-pointer" data-image="D:\New folder\python.png">Python Course - Sololearn</li>
+      <li class="card bg-gray-50 p-4 rounded-lg shadow-md text-gray-600 text-center md:col-span-2 cursor-pointer" data-image="D:\New folder\excel.jpg">Excel for Beginners - Great Learning</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Extracurriculars -->
+<section id="extracurriculars" class="content-section section bg-gray-100">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold text-blue-600 text-center mb-6">Extracurriculars</h2>
+    <div class="space-y-4">
+      <div class="card bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium text-gray-800 mb-2">Club Organiser</h3>
+        <p class="text-gray-600">Conducted event on advantages of using solar energy.</p>
+      </div>
+      <div class="card bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium text-gray-800 mb-2">NSS Team Member</h3>
+        <p class="text-gray-600">Participated in awareness program on anti-ragging and drug abuse with presence of District Judge and SP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="content-section section bg-white">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold text-blue-600 text-center mb-6">Education</h2>
+    <div class="space-y-4">
+      <div class="card bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium mb-2">MVGR College of Engineering</h3>
+        <p>B.Tech, Information Technology (2022–2026) | CGPA: 8.5</p>
+      </div>
+      <div class="card bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium mb-2">Sri Chaitanya Junior College</h3>
+        <p>Intermediate (2020–2022) | 91%</p>
+      </div>
+      <div class="card bg-gray-50 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-medium mb-2">Sri Chaitanya School</h3>
+        <p>SSC (2019–2020) | CGPA: 10</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="content-section section bg-gray-100">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-blue-600 mb-6">Contact</h2>
+    <p class="text-lg text-gray-600 mb-4">Interested in collaborating or exploring opportunities? Reach out.</p>
+    <p>Email: <a href="mailto:potnurumehersrija@gmail.com" class="text-blue-600 hover:underline">potnurumehersrija@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919550765749" class="text-blue-600 hover:underline">+91 9550765749</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/potnuru-meher-srija-a5a7ba259/" class="text-blue-600 hover:underline" target="_blank">linkedin.com/in/potnuru-meher-srija</a></p>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="image-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-4 rounded-lg max-w-3xl w-full relative">
+    <button id="close-modal" class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <img id="modal-img" src="" alt="Certificate" class="w-full h-auto rounded"/>
+  </div>
+</div>
+
+<script>
+  // Toggle Sections
+  const contentSections = document.querySelectorAll('.content-section');
+  const navLinks = document.querySelectorAll('.nav-link');
+  function toggleSections(sectionId) {
+    contentSections.forEach(section => {
+      section.style.display = section.id === sectionId || sectionId !== 'home' ? 'block' : 'none';
+    });
+  }
+  toggleSections('home');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const sectionId = this.getAttribute('data-section');
+      toggleSections(sectionId);
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('active');
+  });
+
+  // Certificate Modal
+  document.querySelectorAll('#certifications li').forEach(item => {
+    item.addEventListener('click', () => {
+      const imgSrc = item.getAttribute('data-image');
+      document.getElementById('modal-img').src = imgSrc;
+      document.getElementById('image-modal').classList.remove('hidden');
+    });
+  });
+  document.getElementById('close-modal').addEventListener('click', () => {
+    document.getElementById('image-modal').classList.add('hidden');
+  });
+</script>
+</body>
+</html>
